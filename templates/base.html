@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href= "/static/style.css"/>
+    {% block title %}{% endblock %}
+</head>
+    <body>
+        <header>
+                <div class = "head">
+                    <a  href="/"> Tea Masters </a>
+                </div>
+                <div class = "head">
+                    <a  href="/categories"> Categories </a>
+                </div>
+                <div class="carzina">
+                    <a href=""><img src="../static/img/carzina.png" alt="not found" /> </a>
+                </div>
+                <div class="head_sign_in">
+                    {% if current_user.is_anonymous %}
+                        <a href="{{ url_for('login') }}">Sign in</a>
+                    {% else %}
+                        <a href="{{ url_for('logout') }}">Sign out</a>
+                    {% endif %}
+                </div>
+        </header>
+
+        {% block body %}{% endblock %}
+
+        <footer>
+            <div class = "bottom_border">
+                <ul class="bottom">
+                <li class="bottom_contact bottom-contact_title">OOO "Tea Masters"</li>
+                <li class="bottom_contact"><a target="_blank" href="/about"> About us </a></li>
+                <li class="bottom_contact">contacts: +7 (800) 555-35-35</li>
+                <li class="bottom_contact">teamasters@gmail.com</li>
+                <li class="bottom-contact bottom-contacts_link"><a href="">report a disturbance</a></li>
+            </ul>    
+        </footer>
+    </body>

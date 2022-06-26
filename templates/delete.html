@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title> Delete from the Tea shop </title>
+{% endblock %}
+
+{% block body %}
+    <div class="creation">
+        <form class ="form_p" method="POST">
+            <h1 class="form_title_p"> Delete Product from the tea shop</h1>
+            <div class="form_group_p">
+                <input class="form_input_p" type="number" name="delete_id" id="delete_id" placeholder=" ">
+                <label class="form_label_p">Id</label>
+            </div>
+            <button class="form_button_p" type="submit"> Delete </button>
+        </form>
+    </div>
+
+{% endblock %}

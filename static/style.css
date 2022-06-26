@@ -1,0 +1,389 @@
+*{
+    padding: 0;
+    margin: 0;
+    border:0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+.head{
+    color: rgb(5, 5, 5);
+    border: 0;
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: 500; 
+    margin: 15px 0 0 100px;
+    display: inline-block;
+}
+.head a{
+    color: black;
+    text-decoration: none;
+}
+.carzina img{
+    width: 60px;
+    height: 60px;
+    float: right;
+    margin: -55px 100px 0 0;
+}
+.block{
+    margin:50px auto;
+    height:550px;
+    background: url('../static/img/na start stranitsu chai.jpg') center/ 50% 100% no-repeat, linear-gradient(to bottom, rgb(7, 116, 7) 0%, rgba(131, 85, 26, 0.904) 50%, rgb(39, 131, 39) 100%);
+}
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+.bottom a{
+    color: black;
+    text-decoration: none;
+}
+.bottom_border{
+    height: 250px;
+    width: 100%;
+    border-top: 1px solid #2f2e33;
+    margin: 100px 0 0 0;
+    background: rgba(204, 192, 182, 0.932);
+}
+.bottom_contact{
+    margin: 0 0 10px 0;
+}
+.bottom_contact_title{
+    margin: 30px 0 30px 0;
+}
+.creation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form_p{
+    width:1000px;
+    padding: 64px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: cursive;
+    letter-spacing: 1px;
+}
+.form_input_p,
+.form_button_p{
+    font-family: cursive;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.form_title_p{
+    text-align:center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
+}
+.form_group_p{
+    position: relative;
+    margin-bottom: 32px;
+}
+.form_label_p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: #9e9e9e;
+    transition: 0.3s;
+}
+.form_input_p{
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+.form_input_p:focus{
+    border-bottom: 1-x solid #c59843
+}
+.form_button_p{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #c48d27;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_button_p:focus,
+.form_button_p:hover{
+    background-color: #b17c1b;
+}
+.form_input_p:focus ~ .form_label_p,
+.form_input:not(:placeholder-shown) ~ .form_label_p {
+    top: -18px;
+    font-size:12px;
+    color: #e0e0e0;
+}
+.items{
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.product{
+    margin: 0 0 20px 0;
+    flex: 0 0 25%;
+}
+.product_img img{
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.product_title{
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-family: cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.product_title_a {
+    display: block;
+    color: #000;
+}
+.product_cat{
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-family: cursive;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.product_price{
+    text-align: center;
+    margin: 0 0 5px 0;
+    font-family: cursive;
+    font-size: 18px;
+}
+.container {
+    max-width: 880px;
+    margin: 0 auto;
+    width: 100%;
+}
+.production_title{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 60px 0 30px 0;
+    font-family: cursive;
+}
+.production_sort{
+    display: flex;
+}
+.production_sort_button{
+    flex: 0 0 50px;
+    transition: transform 0.6s ease;
+    display: inline-block;
+    transform: rotate(360deg);
+    border: 3px solid #000;
+    border-radius: 50%;
+}
+.production_sort_button img{
+    height: 50px;
+    width: 50px;
+}
+.production_sort_button:hover{
+    transform: rotate(0);
+}
+.production_sort_subtitle{
+    display: flex;
+    flex: 1 1 auto;
+}
+.production_sort_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 33.333%;
+    margin: 0 3px;
+    font-family: cursive;
+}
+.production_sort_list input{
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #fff;
+}
+.production_sort_list input:hover {
+    transition: all 50ms ease;
+    transform: rotate(-4deg);
+    font-size: 20px;
+}
+.production_category{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: cursive;
+    font-size: 30px;
+    margin: 50px 0;
+}
+.category_products{
+    display: flex;
+    flex-wrap: wrap;
+}
+.head_sign_in{
+    float: right;
+    margin: -55px 100px 0 0;
+    color: rgb(5, 5, 5);
+    border: 0;
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: 500; 
+}
+.head_sign_in a{
+    display: block;
+    color: #000;
+}
+.item_loc{
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.item_id{
+    margin: 0 0 20px 0;
+    flex: wrapper;
+}
+.item_img{
+    float: center;
+    flex: 1 1 auto;
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.item_img img{
+    width: 100%;
+    height: 100%;
+}
+.item_title{
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-family: cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.item_price{
+    text-align: center;
+    margin: 0 0 5px 0;
+    font-family: cursive;
+    font-size: 18px;
+}
+.item_cat{
+    text-align: center;
+    margin: 15px 0 5px 0;
+    font-family: cursive;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.but{
+    display: block;
+    margin: 15px 0 5px 0;
+    font-family: cursive;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin: 50px;
+}
+.login_system{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form{
+    width: 700px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+    font-family: cursive;
+    letter-spacing: 1px;
+}
+.form_input,
+.form_button{
+    font-family: cursive;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.form_title{
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
+}
+.form_group{
+    position: relative;
+    margin-bottom: 32px;
+}
+.form_label{
+    bottom: 0;
+    top:0;
+    left:0;
+    z-index: -1;
+    color: #9e9e9e;
+    transition: 0.3s;
+}
+.form_input{
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.form_input:focus{
+    border-bottom: 1px solid #cca12a;
+}
+.form_button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #dda406;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_button:focus,
+.form_button:hover{
+    background-color: rgba(226, 147, 0, 0.7);
+}
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown) ~.form_label {
+    top: -18px;
+    font-size: 12px;
+    color: #e0e0e0;
+}

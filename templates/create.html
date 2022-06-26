@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title> Add tea to the Tea shop </title>
+{% endblock %}
+
+{% block body %}
+    <div class="creation">
+        <form class ="form_p" method="post">
+            <h1 class="form_title_p"> Add Product to the tea shop</h1>
+            <div class="form_group_p">
+                <input class="form_input_p" type="text" name="title" id="title" placeholder=" ">
+                <label class="form_label_p">Name</label>
+            </div>
+            <div class="form_group_p">
+                <input class="form_input_p" type="text" name="price" id="price" placeholder=" ">
+                <label class="form_label_p">Price</label>
+            </div>
+            <div class="form_group_p">
+                <input class="form_input_p" type="text" name="category" id="category" placeholder=" ">
+                <label class="form_label_p">category</label>
+            </div>
+            <div class="form_group_p">
+                <input class="form_input_p" type="text" name="img" id="img" placeholder=" ">
+                <label class="form_label_p">image</label>
+            </div>
+            <button class="form_button_p" type="submit"> Add </button>
+        </form>
+    </div>            
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Tea shop</title>
+{% endblock %}
+
+{% block body %}
+    <div class="block">
+        
+    </div>
+    <div class = container>
+        <div class="production_title">Our production</div>
+        <form action="#" method="post">
+        <div class="production_sort">
+            <div class="production_sort_button"><img src="../static/img/sort.png" alt=""></div>
+            <ul class="production_sort_subtitle">
+                <li class="production_sort_list"><input type="button" name="id" value="id"></li>
+                <li class="production_sort_list"><input type="button" name="Price (Ascending)" value="Price (Ascending)"></li>
+                <li class="production_sort_list"><input type="button" name="Price (Ascending)" value="Price (Descending)"></li>
+            </ul>
+        </div>
+        </form>
+        <div class = items>
+            {% for el in item %}
+                <div class = product>
+                    <div class = product_img>
+                            <img class='product_img' src="../static/product_img/{{el.img}}" alt="not found">
+                    </div>
+                    <a target="_blank" href="{{ url_for('item', id=el.id) }}" class="product_title_a"><div class="product_title">{{ el.title }}</div></a>
+                    <div class="product_price">cost: {{ el.price }} $</div>
+                    <div class="product_cat">category: {{ el.category }}</div>
+                </div>    
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+

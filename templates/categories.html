@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title> Categories</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="category">
+            {% for cat in categor %}
+                <div class="production_category">{{ cat }}</div>
+                <div class="category_products">
+                    {% for el in item %}
+                        {% if el.category == cat %}
+                            <div class="product">
+                                <div class="product_img"><img class='product_img' src="../static/product_img/{{el.img}}" alt="not found"></div>
+                                    <a href="{{ url_for('item', id=el.id) }}" class="product_title_a">
+                                        <div class="product_title">"{{ el.title }}"</div>
+                                        <div class="product_price">cost: {{ el.price }} $</div>
+                                    </a>
+                                </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
